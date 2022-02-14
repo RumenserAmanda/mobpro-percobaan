@@ -80,4 +80,38 @@ let object2 = {
     mahasiswaAktif: true,
     mataKuliah: ["Kalkulus", "Computer Programming", "Mobile Programming"]
 }
+// Second Commit
+let { NIM: DDVONIM, noRegis: DDVONoRegis="noRegisDefaultValue", fakultas: DDVOFakultas="fakultasDefaultValue", umur: DDVOUmur, mahasiswaAktif: DDVOMahasiswaAktif, mataKuliah: DDVOMataKuliah } = object2;
+console.log(DDVONIM);
+console.log(DDVONoRegis);
+console.log(DDVOFakultas);
+console.log(DDVOUmur + "\n\n\n");
 
+
+// DESTRUCTURING REST PARAMETER - ARRAY
+let DRPAArray = ["alpha", "bravo", "charlie", "delta", "echo", "foxtrot", "golf"];
+[DRPAv1, DRPAv2, ...DRPAv3] = DRPAArray;
+console.log(DRPAv1);
+console.log(DRPAv2);
+console.log(DRPAv3 + "\n\n\n");
+
+
+// DESTRUCTURING REST PARAMETER - OBJECT
+let object3 = {
+    NIM: 123443211234,
+    noRegis: "S12345678",
+    fakultas: "Ilmu Komputer",
+    umur: 20,
+    mahasiswaAktif: true,
+    mataKuliah: ["Kalkulus", "Computer Programming", "Mobile Programming"]
+};
+
+let { NIM: DRPONIM, noRegis: DRPONoRegis, ...DRPORest } = object3;
+console.log(DRPONIM);
+console.log(DRPONoRegis);
+console.log(DRPORest);
+
+// Mengambil properti yang tersimpan di dalam Object DRPORest
+console.log(DRPORest.umur);
+console.log(DRPORest.mahasiswaAktif);
+console.log(DRPORest.mataKuliah);
