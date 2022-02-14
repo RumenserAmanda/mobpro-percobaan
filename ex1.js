@@ -142,3 +142,13 @@ function funcNo5(inp) {
     num++;
     return console.log(num + " - " + inp);
 }
+
+//second commit
+console.log("no. 5");
+let num = -1;
+programming.languages.map(funcNo5);
+
+function funcNo5(inp) {
+    num++;
+    return console.log(num + " - " + inp);
+}
