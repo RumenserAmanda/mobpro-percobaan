@@ -76,4 +76,82 @@ let promise = new Promise((resolve, reject) => {
 });
 
 */
+
 //Second Commit
+// Promise (w/then()) - Fulfilled
+let promiseWthenF = new Promise((resolve, reject) => {
+    if(true) {
+        resolve("resolve");
+    }
+    else {
+        reject("reject");
+    }
+});
+promiseWthenF.then((r) => {
+    console.log(r);
+});
+
+// Promise (w/then()) - Rejected
+let promiseWthenR = new Promise((resolve, reject) => {
+    if(false) {
+        resolve("resolve");
+    }
+    else {
+        reject("reject");
+    }
+});
+promiseWthenR.then((r) => {
+    console.log(r);
+});
+
+// Promise (w/Async)
+async function asyncFunc() {
+    return "Asynchronous Function";
+};
+console.log(asyncFunc());
+
+// Promise (w/Async & Await)
+let con = true;
+let asyncAwaitFunc = async (con) => {
+    if (con) {
+        return "Fulfilled";
+    }
+    else {
+        throw "Rejected";
+    }
+};
+const execute = async (con) => {
+    try {
+        const msg = await asyncAwaitFunc(con);
+        console.log(msg);
+        console.log("Fulfilled (after condition)");
+    }
+    catch (error) {
+        console.log(error);
+    }
+};
+execute(true);
+execute(false);
+
+
+
+// 3. CLASS
+class Mahasiswa {
+    constructor(nama, tahun, NIM) {
+        this.nama = nama;
+        this.tahun = tahun;
+        this.NIM = NIM;
+    }
+
+    cekNIM() {
+        return this.NIM;
+    }
+}
+
+const mhs1 = new Mahasiswa("alpha", 1, 123412341234);
+console.log(mhs1);
+console.log(mhs1.cekNIM());
+
+const mhs2 = new Mahasiswa("bravo", 2, 678967896789);
+console.log(mhs2);
+console.log(mhs2.cekNIM());
