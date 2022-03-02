@@ -3,7 +3,7 @@
 
 let people = ["Greg", "Mary", "Devon", "James"];
 
-
+tes =carlos;
 
 console.log("no. 1")
 for (let r=0; r<people.length; r++) {
